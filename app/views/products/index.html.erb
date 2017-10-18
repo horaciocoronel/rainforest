@@ -7,9 +7,12 @@
 <% @products.each do |product| %>
 
 <ul>
-  <li><%= product.name %> | <br>
+  <li><%=link_to "#{product.name}", "/products/#{product.id}" %>
+
+      <%= product.name %> | <br>
       <%= product.description %> |  <br/>
       <%= product.price_in_cents %>
+
   </li>
 </ul>
 <% end %>
