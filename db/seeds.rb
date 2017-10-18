@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.create(:name => 'Pepperoni', :description => 'X-Large', :price_in_cents => 9.99)
+
+Product.create(:name => 'Veggie', :description => 'Large', :price_in_cents => 7.99)
+
+Product.create(:name => 'Pineapple', :description => 'X-Large', :price_in_cents => 8.99)
+
+Product.create(:name => 'Cheese', :description => 'X-Large', :price_in_cents => 7.99)
