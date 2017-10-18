@@ -1,3 +1,5 @@
 <h1> edit </h1>
 
+<p><%= link_to 'Back to Product', "/products/#{@product.id}" %></p>
+
 <%= render 'form_html', product: @product %>
