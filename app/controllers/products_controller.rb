@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
 
     if @product.save
       redirect_to "/products/#{@product.id}"
+      flash[:notice] = "You have successfully created a new product."
     else
       render :new
     end
