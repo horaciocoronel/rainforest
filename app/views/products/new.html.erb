@@ -2,7 +2,7 @@
 
 <%= link_to 'Show all pizzas', products_path %>
 
-<%= render 'form_html' %>
+<%= render 'form_html', product: @product %>
 
 <p>
   <% if @product.errors.any? %>
