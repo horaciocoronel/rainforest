@@ -21,5 +21,20 @@
   <p>
     <%= f.submit %>
   </p>
-
 <% end %>
+
+<p>
+  <% if @product.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(@product.errors.count, "error") %> prohibited this Product from being saved:</h2>
+
+<ul>
+<% @product.errors.values.each do |msg| %>
+   <% msg.each do |m| %>
+  <li><%= m %></li>
+<% end %>
+<% end %>
+</ul>
+</div>
+<% end %>
+</p>

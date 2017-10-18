@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to "/products/#{@product.id}"
     else
-      redirect_to "/products/new"
+      render :new
     end
   end
 
