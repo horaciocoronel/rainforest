@@ -18,9 +18,12 @@
   <p>
     <ul>
       <li> <%= our_comment.created_at %> | <%= our_comment.comment %> </li>
+      <li> <%= link_to 'Edit' , "/products/#{params[:id]}/reviews/#{our_comment.id}/edit" %> </li>
     </ul>
-  </p>
+
 <% end %>
+
+
 
 <h4>New Review</h4>
 

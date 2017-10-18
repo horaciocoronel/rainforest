@@ -13,5 +13,11 @@ class ReviewsController < ApplicationController
 
   end
 
+  def edit
+    @review = Review.find_by(params[:id])
+    @product = Product.find_by(params[:product_id])
+  end
+
+
 
 end
