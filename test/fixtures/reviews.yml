@@ -2,6 +2,8 @@
 
 one:
   comment: MyText
+  product_id: 1
 
 two:
   comment: MyText
+  product_id: 1
