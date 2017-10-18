@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     @product.price_in_cents = params[:product][:price_in_cents]
 
     if @product.save
-      redirect_to "/products"
+      redirect_to "/products/#{@product.id}"
     else
       redirect_to "/products/new"
     end
