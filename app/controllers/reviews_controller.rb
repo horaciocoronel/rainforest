@@ -19,5 +19,19 @@ class ReviewsController < ApplicationController
   end
 
 
+  def update
+
+    @review = Review.find_by(params[:id])
+
+    if @review.update(:comment => params[:review][:comment])
+      redirect_to @review.product
+        flash[:notice] = "You have successfully updated a review."
+    else
+      redirect_back_or_to @review.product
+    end
+  end
+
+
+
 
 end
