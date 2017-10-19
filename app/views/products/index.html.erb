@@ -1,5 +1,6 @@
 <h1> Index of Our Pizzas and Prices </h1>
 
+<% if current_user %>
 <% @products.each do |product| %>
 
 <ul>
@@ -11,4 +12,6 @@
       Price: <%= product.price_in_dollars %>
   </li>
 </ul>
+<% end %>
+
 <% end %>
