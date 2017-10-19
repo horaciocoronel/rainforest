@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     @user.email = params[:user][:email]
     @user.password = params[:user][:password]
-    @user.password.confirmation = params[:user][:password_confirmation]
+    @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
       redirect_to   root_url
