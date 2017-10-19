@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
 
       resource  :users, only: %i(create new)
-      resource :sessions, only %i(create new destroy)
+      resource :sessions, only: %i(create new destroy)
       resources :products do
       resources :reviews, except: [:index, :new, :show]
     end

@@ -1,16 +1,5 @@
 <h1> Index of Our Pizzas and Prices </h1>
 
-<p><%= link_to 'New Pizza User', new_users_path %></p>
-<p><%= link_to 'Login for your pizza', new_sessions_path %></p>
-
-
-<% if session[:user_id] %>
-  <p><%= link_to 'Logout', sessions_path, method: :delete %></p>
-
-<% else %>
-  <p>Please login to see our other pizza items. </p>
-<% end %>
-
 <% @products.each do |product| %>
 
 <ul>

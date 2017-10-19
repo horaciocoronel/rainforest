@@ -12,10 +12,17 @@
 
     <nav>
       <ul>
-        <li><%= link_to 'Home Page', products_path %> </li>
-        <li><%= link_to 'New Product', new_product_path %> </li>
-        <li><%= link_to 'New User', new_users_path %> </li>
-        <li><%= link_to 'Login', root_path %> </li>
+        <li><%= link_to 'New Pizza User', new_users_path %></li>
+        <li><%= link_to 'Login for your pizza', new_sessions_path %></li>
+
+
+        <% if session[:user_id] %>
+          <li><%= link_to 'Logout', sessions_path, method: :delete %></li>
+
+        <% else %>
+          <li>Please login to see our other pizza items. </li>
+        <% end %>
+
 
 
       </ul>
