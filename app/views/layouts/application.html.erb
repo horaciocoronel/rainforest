@@ -16,9 +16,9 @@
         <li><%= link_to 'Login for your pizza', new_sessions_path %></li>
 
 
-        <% if session[:user_id] %>
+        <% if current_user %>
           <li><%= link_to 'Logout', sessions_path, method: :delete %></li>
-
+          <p> Hello <%= current_user.email %> </p>
         <% else %>
           <li>Please login to see our other pizza items. </li>
         <% end %>
